@@ -1,14 +1,10 @@
 # seed
-Repository with random riddles for DBSP's amusement
+Repository with random riddles for a SeedPirates alternative
 
 # Ideas
 
-It should contain more interactive and different type of riddles (compared to seed pirates ones).
-Sequential 
-
-# Reward
-
-Steam gift: "Reversion" (3 chapters?), a graphical adventure that happens inside FIUBA 
+It should contain more interactive and different type of riddles (compared to the ones used in seed pirates).
+Maybe they could be sequential instead of parallel? Or you could start "revealing"
 
 # UI
 
@@ -26,40 +22,46 @@ Will show an animated gif with multiple 4-letter names changing from one into an
 For example, using codified "aqui, pone, tuuu, nomb, reen, codi, gonz". + ".gzalo.com"
 (2/3 fps so that it can't be copied easily)
 
-And below it should have a message saying: `Para comenzar el juego, codifica las primeras 4 letras de tu nombre`, with a picture of a Caesar Salad and a "+1" symbol.
+And below it should have a message saying: `Para comenzar el juego, codifica las primeras 4 letras de mi nombre`, with a picture of a Caesar Salad and a "+1" symbol.
+
+Answer: "gonz" => "hpoa"
 
 # Riddles
 
-## Starting: rotate key (reference to lost)
+## Starting: rotate key (pseudo reference to lost)
 
 `Are you ready to begin the game? If you are unsure, you probably already LOST` (with LOST logo)
-Drag and drop key
-Disclaimer: This game is WIP, and it not have an end
+Drag and drop key to the place
 
-## 1 - Anagram of your name
-`To get started, insert a logical anagram of your name`
-`Carolina <=> Racional`
+## Anagram ⭐⭐
 
-## 2 - `What can you see` images
+Oir Sapó Ocisu a Calumniado
+Támesis => sistema
 
-"per fec tos" ?
+## `What can you see` images ⭐
+
+"X " DESINFECTO - primera mitad?
+
 "Des + Conos + & + 2"
+=> quién la dirigió?
 
-"Perfectos desconocidos"
+Crane (gruya pintada USA, grua pintada UK) + letra O (o algo químico)
 
-## 3 - Reference to Lost
+## Some Reference to Lost ⭐⭐⭐
 
 Desmond = Penny
 Faraday = Desmond
+
+Hume = Penny (1 centavo)
+Faraday = Hume
+
 WORD = Constant/Constante
 
-## 4 - Audio reversing / pitch shifting
+## Audio reversing / pitch shifting ⭐⭐
 
-Link to an audio MP3 that says (reversed and pitch shifted):
-`Yo soy goma, tu eres`
-WORD = Cola/Glue
+Link to an audio MP3 that says something (being reversed and pitch shifted)
 
-## 5 - Image filling
+## Image filling ⭐⭐
 
 Whole white PNG image that says "this contains something"
 - A strawberry
@@ -68,54 +70,43 @@ Whole white PNG image that says "this contains something"
 
 Launch year of this image: 1967
 
-## 6 - Translation of japanese characters (as audio)
+## Translation from a weird language ⭐
 
-イマージョン - Inmersión
+"juda katta" => inmenso (google translate dice "demasiado grande")
 
-## 7 - Rescramble QR code 
-Broken puzzle QR code, it also returns a broken URL 
+## Rescramble QR code ⭐
+cube 6 faces QR code 
 
-Something like `dbsp|http://|.gzalo|.com|/nextepisode`
+it could return a hint text instead of an URL
 
-## 8 - Pokemon pixel art
+## Pokemon pixel art ⭐⭐
 
 A couple of pokemons represented as minimalist pixel art.
 Two of them selected with arrows, first and last part of name 
+Palabra: VULGAR: VULpix + genGAR
 
-## 9 - Search the song
+## Search the song ⭐⭐
 
-osfosf
-psfpsf
-pdgpdg
-adgadg
-(virtualPiano)
-
-notas tiburón valdez hasta abajo papi
+[VirtualPiano puzzles](puzzles/virtualpiano.md)
 "Animal que emite esos sonidos" -> tiburón
 
-"Hasta dónde?"
+Or a quiz regarding part of the lyrics (4/4/4)
 
-## 10 - Aristocats reference
+## Impossible music ⭐⭐
 
-Quién canta "do mi sol do do sol mi do" (en partitura)
-=> Duquesa
+Reorder the spotify code until something comes up
 
-## 11 - Impossible music
+A quiz regarding the lyrics maybe?
 
-The
-Light
-(Kero Kero Bonito Remix)
-Metronomy
-
+The Light (Kero Kero Bonito Remix) Metronomy
 `Walking in the ... It's scary in the ...`
 
-## 12 - Chemistry Puzzles
+## Weird Puzzles ⭐⭐
 
 Soy de acero, si me quemo aumento de peso
+=> Palabra: LANA
 
-=> LANA
-
-## Other ideas
+## Other random ideas
 
 ### Dar vuelta
 ### Similar al memorioso/director de cine
@@ -123,13 +114,10 @@ Soy de acero, si me quemo aumento de peso
 ### Facebook profile ID
 ### Numeric
 ### Search in a paper
-`Improved Alpha-Tested Magnification for Vector Textures and Special Effects`
-Figure 2, "high resolution"
 ### Search in a movie
-Back to the future, minute and second (netflix logo)
-something that appears in the back
+Logo of movie, minute and second (netflix logo). Search for something that appears in the back
 ### Search in an image
-Random spectrogram with a 3d word
+Random stereogram with a 3d word or object
 ### Missing word of a list
 ### Coordinates
 Couple of options that tell you different places, one of them is a place
@@ -138,3 +126,6 @@ Image of a place, distance to another one
 ### Lost console to input words
 ### T9 / numeric encoding/decoding
 ### Morse code many combinations
+### Aristocats reference
+Quién canta "do mi sol do do sol mi do" (en partitura)
+=> Duquesa
