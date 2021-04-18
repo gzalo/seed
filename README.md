@@ -1,131 +1,94 @@
-# seed
-Repository with random riddles for a SeedPirates alternative
+# Acertijos similares a Seedpirates
 
-# Ideas
+## Anagrama doble ⭐⭐
+**Oir Sapó Ocisu a Calumniado**
 
-It should contain more interactive and different type of riddles (compared to the ones used in seed pirates).
-Maybe they could be sequential instead of parallel? Or you could start "revealing"
+<details> 
+  <summary>Pista</summary>
+   Rio pasó sucio a inmaculado
+</details>
 
-# UI
+<details> 
+  <summary>Respuesta</summary>
+   Támesis => sistema   
+</details>
 
-Full screen, using a layout similar to what Mel designed for my new website (primary colors).
+## Qué ves ⭐
 
-On top, it should show a Portal style sign with "1/N" and related dangers/rewards:
+"X " + DESINFECTO (sin la primera mitad)\
+"Des 🍦 & 2"
 
-![Portal 2 signs](inspirations/portal.jpg)
+**Quién la dirigió?**
 
-## Entry point
+<details> 
+  <summary>Respuesta</summary>
+   Iglesia (Alex de la)
+</details>
 
-The entry point shall be `seed.gzalo.com`
+## Qué ves ⭐
 
-Will show an animated gif with multiple 4-letter names changing from one into another
-For example, using codified "aqui, pone, tuuu, nomb, reen, codi, gonz". + ".gzalo.com"
-(2/3 fps so that it can't be copied easily)
+**Gruya pintada pintada con bandera USA**\
+**Grua pintada con bandera UK**\
+**Con una letra O**
 
-And below it should have a message saying: `Para comenzar el juego, codifica las primeras 4 letras de mi nombre`, with a picture of a Caesar Salad and a "+1" symbol.
+<details> 
+  <summary>Respuesta</summary>
+   Cráneo
+</details>
 
-Answer: "gonz" => "hpoa"
+## Imagen vacía ⭐⭐⭐
 
-# Riddles
+**[Esta imagen](inspirations/imagehidden.png) tiene algo. ¿En qué año se lanzó?**
 
-## Starting: rotate key (pseudo reference to lost)
-
-`Are you ready to begin the game? If you are unsure, you probably already LOST` (with LOST logo)
-Drag and drop key to the place
-
-## Anagram ⭐⭐
-
-Oir Sapó Ocisu a Calumniado
-Támesis => sistema
-
-## `What can you see` images ⭐
-
-"X " DESINFECTO - primera mitad?
-
-"Des + Conos + & + 2"
-=> quién la dirigió?
-
-Crane (gruya pintada USA, grua pintada UK) + letra O (o algo químico)
-
-## Some Reference to Lost ⭐⭐⭐
-
-Desmond = Penny
-Faraday = Desmond
-
-Hume = Penny (1 centavo)
-Faraday = Hume
-
-WORD = Constant/Constante
-
-## Audio reversing / pitch shifting ⭐⭐
-
-Link to an audio MP3 that says something (being reversed and pitch shifted)
-
-## Image filling ⭐⭐
-
-Whole white PNG image that says "this contains something"
-- A strawberry
-- A field 
-- Forever (infinity)
-
-Launch year of this image: 1967
-
-## Translation from a weird language ⭐
-
-"juda katta" => inmenso (google translate dice "demasiado grande")
-
-## Rescramble QR code ⭐
-cube 6 faces QR code 
-
-it could return a hint text instead of an URL
+<details> 
+  <summary>Respuesta</summary>
+   - A strawberry
+  - A field 
+  - Forever (infinity)
+  - => 1967
+</details>
 
 ## Pokemon pixel art ⭐⭐
 
-A couple of pokemons represented as minimalist pixel art.
-Two of them selected with arrows, first and last part of name 
-Palabra: VULGAR: VULpix + genGAR
+[Ver imagen](inspirations/pokemons.png)
 
-## Search the song ⭐⭐
+<details> 
+  <summary>Pista</summary>
+   (37) Vulpix y (94) Gengar
+</details>
 
-[VirtualPiano puzzles](puzzles/virtualpiano.md)
-"Animal que emite esos sonidos" -> tiburón
+<details> 
+  <summary>Respuesta</summary>
+   Palabra: VULGAR: VULpix + genGAR
+</details>
 
-Or a quiz regarding part of the lyrics (4/4/4)
+## Buscar la canción ⭐⭐
 
-## Impossible music ⭐⭐
+[Varias alternativas](puzzles/virtualpiano.md)
 
-Reorder the spotify code until something comes up
+## Puzzle ⭐
 
-A quiz regarding the lyrics maybe?
+**Soy de acero, si me quemo aumento de peso**
 
-The Light (Kero Kero Bonito Remix) Metronomy
-`Walking in the ... It's scary in the ...`
+<details> 
+  <summary>Solución</summary>
+   Palabra: LANA
+</details>
 
-## Weird Puzzles ⭐⭐
+## Bandera ⭐⭐
 
-Soy de acero, si me quemo aumento de peso
-=> Palabra: LANA
+**[juda katta](inspirations/flag.png)**
 
-## Other random ideas
+<details> 
+  <summary>Respuesta</summary>
+   Palabra: inmenso (google translate dice "demasiado grande")
+</details>
 
-### Dar vuelta
+## Otras
+### Dar vuelta audio
 ### Similar al memorioso/director de cine
-### Químico, referencia al diccionario hash
-### Facebook profile ID
-### Numeric
-### Search in a paper
-### Search in a movie
-Logo of movie, minute and second (netflix logo). Search for something that appears in the back
-### Search in an image
-Random stereogram with a 3d word or object
-### Missing word of a list
-### Coordinates
-Couple of options that tell you different places, one of them is a place
-### Where am I 
-Image of a place, distance to another one
-### Lost console to input words
-### T9 / numeric encoding/decoding
-### Morse code many combinations
-### Aristocats reference
-Quién canta "do mi sol do do sol mi do" (en partitura)
-=> Duquesa
+### Buscar en una película
+Mostrando el título, minuto y segundo (con el logo de Netflix). Buscar alguna cosa que aparezca en el fondo
+### Estereograma de imagen 3d u objeto
+### Coordenadas
+### Código morse
