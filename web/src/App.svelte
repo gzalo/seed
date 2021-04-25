@@ -1,173 +1,75 @@
 <script lang="ts">
-	import { onDestroy } from 'svelte';
-	import { fade } from 'svelte/transition';
+	let showClues = false;
+	let showSolutions = false;
 
-/*
-WORD1	ábaco
-WORD2	acelga
-WORD3	acoso
-WORD4	adicto
-WORD5	admitir
-WORD6	adoptar
-WORD7	arco
-WORD8	azar
-WORD9	buzón
-WORD10	cebolla
-WORD11	coco
-WORD12	cubo
-*/
-
-	const apiEndpoint = "https://2fica32wik.execute-api.sa-east-1.amazonaws.com/seed-attempts";
-	const failPhrases = ["No es válido", "Nada que ver", "Flasheaste cualquiera", "Todo mal"];
-
-	let team = "";
-	let words = [];
-	let promise = Promise.resolve([]);
-
-	let elapsed = 2000;
-	let duration = 2000;
-
-	async function fetchResponse() {
-		const response = await fetch(apiEndpoint, {
-			method: 'post',
-			body: JSON.stringify({team, words})
-		});;
-
-		if (response.ok) {
-  			return response.json();
-		} else {
-			throw new Error("Error validando palabras");
-		}
+	function toggleClues(){
+		showClues = !showClues;
 	}
 
-	function handleValidate(){
-		promise = fetchResponse();
-		elapsed = 0;
+	function toggleSolutions(){
+		showSolutions = !showSolutions;
 	}
-
-	function isButtonDisabled(team, words, elapsed){
-		if(elapsed != duration)
-			return true;
-			
-		if(!team)
-			return true;
-
-		if(words.length != 12)
-			return true;
-
-		for(let i=0;i<words.length;i++)
-			if(!words[i])
-				return true;			
-
-		return false;
-	}
-
-	let last_time = window.performance.now();
-	let frame;
-
-	(function update() {
-		frame = requestAnimationFrame(update);
-
-		const time = window.performance.now();
-		elapsed += Math.min(
-			time - last_time,
-			duration - elapsed
-		);
-
-		last_time = time;
-	}());
-
-	onDestroy(() => {
-		cancelAnimationFrame(frame);
-	});
 </script>
 
 <main>
 	<div class="container my-5">
-		<h1>Seed Pirates - Shinkansen</h1>
+		<h1>Seed Pirates - Shinkansen - 24/04/2021</h1>
 		<div class="row">
-			<div class="col mb-3"><img src="img/portal.jpg" alt="Desafío"/></div>
+			<div class="col mb-3"><img src="img/puzzles.png" alt="Desafío"/></div>
 			<div class="col">
-				<div class="mb-3">
-					<label for="team" class="form-label">Nombre del equipo</label>	
-					<input type="name" class="form-control" id="team" bind:value={team}>
-				</div>
-				<div class="mb-3">
-				<span>Palabras</span>
-
-				<div class="row mb-3">
-					<div class="col">
-						1: <input type="text" class="form-control" bind:value={words[0]}>
-					</div>
-					<div class="col">
-						2: <input type="text" class="form-control" bind:value={words[1]}>
-					</div>
-					<div class="col">
-						3: <input type="text" class="form-control" bind:value={words[2]}>
-					</div>
-					<div class="col">
-						4: <input type="text" class="form-control" bind:value={words[3]}>
-					</div>
-				</div>
-
-				<div class="row mb-3">
-					<div class="col">
-						5: <input type="text" class="form-control" bind:value={words[4]}>
-					</div>
-					<div class="col">
-						6: <input type="text" class="form-control" bind:value={words[5]}>
-					</div>
-					<div class="col">
-						7: <input type="text" class="form-control" bind:value={words[6]}>
-					</div>
-					<div class="col">
-						8: <input type="text" class="form-control" bind:value={words[7]}>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="col">
-						9: <input type="text" class="form-control" bind:value={words[8]}>
-					</div>
-					<div class="col">
-						10: <input type="text" class="form-control" bind:value={words[9]}>
-					</div>
-					<div class="col">
-						11: <input type="text" class="form-control" bind:value={words[10]}>
-					</div>
-					<div class="col">
-						12: <input type="text" class="form-control" bind:value={words[11]}>
-					</div>
-				</div>
-
-				</div>
 
 				<p>
-					<button type="submit" class="btn btn-primary" on:click={handleValidate} disabled="{isButtonDisabled(team, words, elapsed)}">Validar</button>
-					{#if elapsed != duration}
-						<span>{((duration - elapsed) / 1000).toFixed(1)}s</span>			
-						<progress value="{(duration - elapsed) / duration}"></progress>
-					{/if}
+					<button type="submit" class="btn btn-primary" on:click={toggleClues} >Ver pistas</button>
 				</p>
 
+				{#if showClues}
+					<h3>1</h3>
+					Tanto la pregunta como la respuesta son anagramas.
+					<h3>2</h3>
+					¿Cómo se dice grúa en inglés?
+					<h3>3</h3>
+					Villana de en una película de Disney.
+					<h3>4</h3>
+					Órgano del cuerpo.
+					<h3>5</h3>
+					Deberás tocar el tema de esa película, y recordar cómo empieza su letra.
+					<h3>6</h3>
+					En la Pokédex, comparten número con "adulto" y "ámbito".
+					<h3>7</h3>
+					La imagen parece blanca pero no lo es, tiene algo oculto. Puedes pintar su fondo con Paint para revelar el secreto.
+					<h3>8</h3>
+					Escrito en lenguaje Básico Galáctico.
+					<h3>9</h3>
+					La letra que está incorrecta en ambas palabras.
+					<h3>10</h3>
+					El engendro asoma de la terraza de un cine a dos cuadras al norte.
+					<h3>11</h3>
+					La de la foto es un personaje principal de la serie Lost/Perdidos.
+					<h3>12</h3>
+					Una palabra que en español se monte y en italiano se unte.
+				{/if}
 
-				{#await promise}
-					Validando...
-				{:then data}
-					{#if data.status === 'invalid'}
-						Revisa las palabras, alguna falta o es inválida.
-					{:else if data.status === 'incorrect'}
-						<p in:fade>
-							{failPhrases[Math.floor(Math.random() * failPhrases.length)]}
-						</p>
-					{:else if data.status == 'correct'}
-						<h1 in:fade> ¡FELICITACIONES, HAS ABIERTO MI COFRE!</h1>
-						<img in:fade src="{data.image}" alt="Has ganado!"/>
-					{/if}
-					
-				{:catch error}
-					<p style="color: red">Error validando palabras: {error}</p>
-				{/await}
+
+				<p>
+					<button type="submit" class="btn btn-primary" on:click={toggleSolutions} >Ver soluciones</button>
+				</p>
+
+				{#if showSolutions}
+				<h3>1:</h3> <strong>Sistema</strong>: ¿Qué río pasó de sucio a inmaculado? El Támesis (anagrama)
+				<h3>2:</h3> <strong>Cráneo</strong>: Una grúa (crane en inglés) que lleva una O.
+				<h3>3:</h3> <strong>Débil</strong>: Por Cruella <em>de Vil</em> (de 101 Dálmatas).
+				<h3>4:</h3> <strong>Timo</strong>: Un órgano del cuerpo que te protege y tiene el mismo nombre que una estafa (timo).
+				<h3>5:</h3> <strong>Fábula</strong>: Al tocar las notas en el teclado suena la canción de "La Bella y la Bestia". La primera palabra de la letra es "fábula". 
+				<h3>6:</h3> <strong>Vulgar</strong>: Los Pokémon son Vulpix y Gengar. Combinando las 3 primeras y las 3 últimas letras se llega a la palabra.
+				<h3>7:</h3> <strong>Variar</strong>: Al pintar el fondo se observa una frutilla, un campo y un símbolo infinito. La canción correspondiente es "Strawberry Fields Forever", que se lanzó en 1967. Ese número corresponde en el diccionario a la palabra <em>Variar</em>.
+				<h3>8:</h3> <strong>Sable</strong>: El texto (en lenguaje Aurebesh) dice "Son de luz", el que se ve es Luke Skywalker, de Star Wars, saga en la cual se usan sables de luz como arma.
+				<h3>9:</h3> <strong>Enlace</strong>: Ambas palabras tienen un error <em>en la ce</em>.
+				<h3>10:</h3> <strong>Gorila</strong>: Mirando al noreste se ve un <em>Godzilla/Gojira</em> asomándose de un edificio. El nombre <em>Gojira</em> surge de la unión de dos palabras, <em>gorila</em> y <em>ballena</em>.
+				<h3>11:</h3> <strong>Rescate</strong>: Res (vaca) + Kate (nombre del personaje de Lost).
+				<h3>12:</h3> <strong>Burro</strong>: Significa <em>manteca</em> en italiano (es bueno para untar, pero no se puede montar).
+				{/if}
+
+
 			</div>
 		</div>
 	</div>
@@ -176,6 +78,6 @@ WORD12	cubo
 
 <style>
  	main {
-		font-family: 'Roboto Mono', monospace;
+		font-family: 'Roboto', Arial, Helvetica, sans-serif;
 	}
 </style>
